@@ -1,0 +1,369 @@
+#container{
+    display:grid;
+    grid-gap:1em;
+     height: 100vh; 
+    
+    /* grid-template-rows: repeat(4,1fr); */
+    grid-template-rows: 1fr .5fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-areas: "nav  nav  nav nav"
+                        "texto--div texto--div texto--div texto--div"
+                         "side main main main"
+                         "side main main main"
+                        "footer footer footer footer"
+                                    ;
+}
+
+.item {
+    padding: 30px;
+    text-align: center;
+    font-size: .5em;
+}
+
+/*NAV*/
+
+#nav{
+    grid-area:nav;
+    background-color: black;
+}
+
+/*form de busqueda */
+.nav--form__icon{
+    color: white;
+}
+
+#logo{
+    float: left;
+    width: 217px;
+    height: 134px;
+    margin-left: 5%;
+}
+
+#buscar{
+    float: right;
+    height: 20%;
+    width: 30%;
+    margin-top: 30px;
+}
+
+.nav--form{
+    height: 100%;
+    width: 100%;
+}
+
+.nav--form__input{
+    height: 100%;
+    width: 50%;
+    float: left;
+    font-size: 2em;
+}
+
+.nav--form__icon{
+    font-size: 3em;
+    float: left;
+    margin-left: 15px;
+    
+}
+
+
+/*botones del nav*/
+#btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ; 
+    grid-template-rows: 1fr ; 
+    width: 100%;
+    background-color: black;
+    justify-content: space-around;
+}
+
+.btn--item__grid{
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    text-decoration: none;
+}
+
+.btn--item__grid:hover{
+    color: yellow;
+}
+
+/*Texto debajo de los botones*/
+
+#texto--amarillo{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: yellow;
+    margin-left: -30px;
+    
+    text-decoration: none;    
+    font-size: 2.5em;
+    font-weight: bold;
+}
+#texto--amarillo a {
+    color: black;
+    font-weight: lighter;
+}
+
+#texto--div{
+    grid-area: texto--div;
+    font-size: 1.2em;
+    font-family: Tahoma;
+}
+
+
+
+#side{
+    grid-area:side;
+    width: 340px;
+}
+
+/*** MAIN ***/
+#main{
+    grid-area:main;
+    overflow-y: scroll;
+     height: 120vh; 
+     display:grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 20px;
+     font-family: tahoma;
+}
+
+#buscar--main{
+
+    grid-column: 1/4;
+    margin-right: 120px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(228, 224, 224);
+    padding: 15px;
+}
+#buscar--main p{
+    width: 20%;
+    height: 50%;
+    font-size: 1.5em;
+    
+}
+
+#opt--busqueda{
+    height: 80%;
+    font-size: 1em;
+
+}
+
+.card{
+    width: 287px;
+    height: 513px;
+    justify-content: space-between;
+    
+}
+
+.main--prod__tit{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.main--prod__img{
+    width: 300px;
+    height: 250px;
+}
+
+.main--prod__btn{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    justify-self: end;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 20px;
+    
+}
+
+.main--prod__desc{
+    font-size: 1.8em;
+}
+
+.main--prod__btn:hover {
+   background-color: rgb(165, 159, 159);
+   color: black;
+}
+
+/*** SIDE ***/
+
+#side{
+    width: 340px;
+}
+
+#goldenTicket{
+    width: 300px;
+    height: 70%;
+    overflow: hidden;
+    margin-top: 60px;
+
+
+}
+
+
+#gt--michael{
+   width: 370px;
+   margin-bottom: 20px;
+
+}
+
+#gt--gt{
+    width: 200px;
+    height: 145px;
+
+}
+
+#goldenTicket a{
+    text-shadow: goldenrod 0.1em 0.1em 0.2em;
+    text-align: center;
+    text-decoration: none;
+    width: 292px;
+    font-size: 3em;
+    display: block;
+    color: black;
+    font-family: tahoma;
+    margin-bottom: 20px;
+
+}
+
+#becarios img{
+    width: 370px;
+    height: 225px;
+}
+/** FONDO **/
+
+#fondo{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    margin-top: -950px;
+    background-color: rgb(88, 88, 88);
+    opacity: .6;
+    z-index: 2; 
+}
+
+/** CARRITO ***/
+ #carrito {
+    font-family: tahoma;
+    z-index: 2;
+    position: absolute;
+    visibility: hidden;   
+    width: 25%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-top: -600px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+ }
+
+ #carrito--titulo{
+   display: flex;
+   padding: 40px ;
+   font-size: 2em;
+   justify-content: space-around;
+ }
+ #carrito--titulo h3{
+     margin-top: 6px;
+ }
+
+ #carrito--close__btn{
+     color: black;
+ }
+ #carrito--titulo i{
+    margin-left: 130px;
+ 
+  }
+ #carrito--productos{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     height: 100%;
+     padding: 20px;
+     margin-top: -50px;
+     overflow-y: scroll;
+    
+}
+
+#c--items{
+    background-color: rgb(234, 234, 234);
+    margin: 15px;
+    padding: 10px;
+}
+
+.c--items__img{
+    width: 90px;
+    height: 90px;
+    float: left;
+}
+.c--items__nombre{
+    width: 200px;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.c--items__borrar{
+    color: black;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.c--items__cantidad{
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+}
+
+.c--items__precio{
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+    
+}
+
+#carrito--total{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#carrito--total p{
+    margin-left: 20px;
+}
+
+.precio--total{
+    margin-right: 20px;
+}
+
+#total--btn{
+    width: 100%;
+    height: 90px;
+    background-color: black;
+    justify-self: end;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+     
+}
+
+#total--btn:hover {
+   background-color: rgb(165, 159, 159);
+}

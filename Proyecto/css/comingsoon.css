@@ -1,0 +1,8 @@
+#container{
+    background-image: url("/dwes/Proyecto/img/coming.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 100vh; /* You must set a specified height */
+    
+}   

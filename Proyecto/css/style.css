@@ -1,0 +1,126 @@
+#container{
+    display:grid;
+    grid-gap:1em;
+     height: 100vh; 
+    
+    /* grid-template-rows: repeat(4,1fr); */
+    grid-template-rows: 1fr .5fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas: "nav  nav  nav "
+                        "texto--div texto--div texto--div "
+                         "side main main "
+                         "side main main "
+                        "footer footer footer "
+                                    ;
+}
+
+.item {
+    padding: 30px;
+    border: 1px solid #000;
+    background-color: #ece5d5;
+    text-align: center;
+    font-size: .5em;
+}
+
+/*NAV*/
+
+#nav{
+    grid-area:nav;
+    background-color: black;
+}
+
+/*form de busqueda */
+.nav--form__icon{
+    color: white;
+}
+
+#logo{
+    float: left;
+    width: 217px;
+    height: 134px;
+    margin-left: 5%;
+}
+
+#buscar{
+    float: right;
+    height: 20%;
+    width: 30%;
+    margin-top: 30px;
+}
+
+.nav--form{
+    height: 100%;
+    width: 100%;
+}
+
+.nav--form__input{
+    height: 100%;
+    width: 50%;
+    float: left;
+    font-size: 2em;
+}
+
+.nav--form__icon{
+    font-size: 3em;
+    float: left;
+    margin-left: 15px;
+    
+}
+
+
+/*botones del nav*/
+#btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ; 
+    grid-template-rows: 1fr ; 
+    width: 100%;
+    background-color: black;
+    justify-content: space-around;
+}
+
+.btn--item__grid{
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    text-decoration: none;
+}
+
+.btn--item__grid:hover{
+    color: yellow;
+}
+
+/*Texto debajo de los botones*/
+
+#texto--amarillo{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: yellow;
+    margin-left: -30px;
+    text-decoration: none;    
+    font-size: 2.5em;
+    font-weight: bold;
+}
+#texto--amarillo a {
+    color: black;
+    font-weight: lighter;
+}
+
+#texto--div{
+    grid-area: texto--div;
+}
+
+#side{
+    grid-area:side;
+}
+
+/* MAIN */
+#main{
+    grid-area:main;
+    overflow-y: scroll;
+     height: 120vh; 
+}
+
+
+
